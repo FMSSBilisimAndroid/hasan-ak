@@ -7,17 +7,20 @@ import com.hasan.dicegame.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivityMainBinding
+    private lateinit var binding:ActivityMainBinding //Android's recommended view binding is used
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
-
+   
+   //will happen when the button is clicked events
    fun diceRoll(view:View){
-        val dice1 = (1..6).random()
-        val drawableResourse1 = when(dice1) {
+        val dice1 = (1..6).random() //Generates random numbers from 1 to 6
+        
+       //the image corresponding to the randomly generated number is retrieved
+        val drawableResourse1 = when(dice1) { 
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
@@ -27,10 +30,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-       binding.imageView.setImageResource(drawableResourse1)
-       binding.textView.text = "Skor:$dice1"
+       binding.imageView.setImageResource(drawableResourse1) //the specified image is displayed in the imageview
+       binding.textView.text = "Skor:$dice1" //randomly generated number is shown in textview
 
-       val dice2 = (1..6).random()
+       val dice2 = (1..6).random() //Generates random numbers from 1 to 6
+       
+       //the image corresponding to the randomly generated number is retrieved
        val drawableResourse2 = when(dice2){
            1 -> R.drawable.dice_1
            2 -> R.drawable.dice_2
@@ -40,7 +45,7 @@ class MainActivity : AppCompatActivity() {
            else -> R.drawable.dice_6
        }
 
-       binding.imageView2.setImageResource(drawableResourse2)
-       binding.textView2.text = "Skor:$dice2"
+       binding.imageView2.setImageResource(drawableResourse2) //the specified image is displayed in the imageview 
+       binding.textView2.text = "Skor:$dice2" //randomly generated number is shown in textview
     }
 }
