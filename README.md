@@ -26,3 +26,5 @@ Bu yöntemlerden ilki önce oluşturduğumuz yeni isim alanının ismini yazdık
 
 namespace_ismi.YeniSinifIsmi;
 ```
+## GİF
+<img src ="https://github.com/FMSSBilisimAndroid/hasan-ak/blob/master/screen-record.gif" width = 300 height = 500/> 
